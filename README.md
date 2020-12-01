@@ -24,5 +24,3 @@
   * 行く場合、日程を考える
   * プランに不満があった場合、自分が企画者となる
 
-# ERD
-![キカクルERD](https://user-images.githubusercontent.com/59391263/100713302-6e930680-33f7-11eb-8020-4d4a513d30da.png)

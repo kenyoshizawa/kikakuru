@@ -21,6 +21,9 @@ gem 'sass-rails', '~> 5.0'
 gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails', '~> 4.2'
 gem 'bootsnap', '>= 1.1.0', require: false
+gem 'bootstrap-sass'
+gem 'font-awesome-rails'
+gem 'jquery-rails'
 
 group :development, :test do
   #Debugger

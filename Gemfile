@@ -14,6 +14,7 @@ gem 'mysql2', '>= 0.4.4', '< 0.6.0'
 #UI/UX
 gem 'jbuilder', '~> 2.5'
 gem 'slim-rails'
+gem 'meta-tags'
 
 #Assets
 gem 'sass-rails', '~> 5.0'

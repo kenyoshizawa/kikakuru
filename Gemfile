@@ -11,21 +11,30 @@ gem 'puma', '~> 3.11'
 # Database server
 gem 'mysql2', '>= 0.4.4', '< 0.6.0'
 
-
 #UI/UX
 gem 'jbuilder', '~> 2.5'
 gem 'slim-rails'
+gem 'meta-tags'
 
 #Assets
 gem 'sass-rails', '~> 5.0'
 gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails', '~> 4.2'
 gem 'bootsnap', '>= 1.1.0', require: false
+gem 'bootstrap', '~> 4.5.0'
+gem 'bootstrap-sass'
+gem 'font-awesome-rails'
+gem 'jquery-rails'
 
 group :development, :test do
   #Debugger
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
   gem 'pry-byebug'
+  gem 'better_errors'
+  gem 'binding_of_caller'
+  gem 'pry'
+  gem 'pry-doc'
+  gem 'pry-rails'
 
   #Test
   gem 'factory_bot_rails'

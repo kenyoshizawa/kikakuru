@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_02_19_072319) do
+ActiveRecord::Schema.define(version: 2021_02_19_073919) do
 
   create_table "events", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "title", null: false
@@ -25,6 +25,17 @@ ActiveRecord::Schema.define(version: 2021_02_19_072319) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "user_events", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.bigint "user_id", null: false
+    t.bigint "event_id", null: false
+    t.boolean "attendance", default: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["event_id"], name: "index_user_events_on_event_id"
+    t.index ["user_id", "event_id"], name: "index_user_events_on_user_id_and_event_id", unique: true
+    t.index ["user_id"], name: "index_user_events_on_user_id"
+  end
+
   create_table "users", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "name", null: false
     t.integer "role", default: 0, null: false
@@ -32,4 +43,6 @@ ActiveRecord::Schema.define(version: 2021_02_19_072319) do
     t.datetime "updated_at", null: false
   end
 
+  add_foreign_key "user_events", "events"
+  add_foreign_key "user_events", "users"
 end

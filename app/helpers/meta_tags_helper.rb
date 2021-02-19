@@ -1,16 +1,16 @@
 module MetaTagsHelper
   def default_meta_tags
     {
-      site: current_site.name,
+      site: 'kikakuru',
       reverse: true,
       title: nil,
-      description: current_site.description,
+      description: 'description',
       canonical: request.original_url,
       og: {
         title: :title,
         type: 'website',
         url: request.original_url,
-        image: current_site.og_image_url(:ogp),
+        image: 'https://example.com/hoge.png',
         site_name: :site,
         description: :description,
         locale: 'ja_JP'

@@ -24,6 +24,7 @@ gem 'bootsnap', '>= 1.1.0', require: false
 gem 'bootstrap', '~> 4.5.0'
 gem 'bootstrap-sass'
 gem 'font-awesome-rails'
+gem 'font-awesome-sass', '~> 5.4.1'
 gem 'jquery-rails'
 
 group :development, :test do

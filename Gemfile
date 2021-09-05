@@ -9,7 +9,7 @@ gem 'rails', '~> 5.2.3'
 gem 'puma', '~> 3.11'
 
 # Database server
-gem 'mysql2', '>= 0.4.4', '< 0.6.0'
+gem 'mysql2', '~> 0.5.3'
 
 #UI/UX
 gem 'jbuilder', '~> 2.5'

@@ -1,0 +1,37 @@
+h1 企画作成
+= form_with model: @user, url: events_path, local: true do |f|
+  .form-group.col-md-6
+    = f.label :name
+    = f.text_field :name, class: 'form-control'
+
+  = f.fields_for @event do |i|
+    .form-group.col-md-6
+      = i.label :title
+      = i.text_field :title, class: 'form-control'
+    .form-group.col-md-6
+      = i.label :place
+      = i.text_field :place, class: 'form-control'
+
+      = link_to '食べログ', 'https://tabelog.com/', target: :_blank
+      = link_to 'Google Map', 'https://www.google.co.jp/', target: :_blank
+      = link_to 'Zoom', 'https://us04web.zoom.us/', target: :_blank
+      = link_to 'ミーティングURL発行方法', 'https://support.zoom.us/hc/ja/articles/201362183-%E4%BB%96%E3%81%AE%E3%83%A6%E3%83%BC%E3%82%B6%E3%83%BC%E3%82%92%E3%83%9F%E3%83%BC%E3%83%86%E3%82%A3%E3%83%B3%E3%82%B0%E3%81%AB%E6%8B%9B%E5%BE%85%E3%81%99%E3%82%8B%E3%81%AB%E3%81%AF', target: :_blank
+
+    .form-group.col-md-6
+      = i.label :started_at
+      = i.time_field :started_at, class: 'form-control'
+    .form-group.col-md-6
+      = i.label :finished_at
+      = i.time_field :finished_at, class: 'form-control'
+    .form-group.col-md-6
+      = i.label :finished_at
+      = i.time_field :finished_at, class: 'form-control'
+    .form-group.col-md-6
+      = i.label :deadlined_at
+      = i.time_field :deadlined_at, class: 'form-control'
+    .form-group.col-md-6
+      = i.label :url
+      = i.text_field :url, class: 'form-control'
+
+  .form-group.col-md-6
+    = f.submit '作成する', class: 'btn btn-primary'

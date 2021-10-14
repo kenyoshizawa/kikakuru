@@ -8,4 +8,6 @@ class Event < ApplicationRecord
   # validates :finished_at
   # validates :deadlined_at
   # validates :url
+
+  before_create -> { self.url = SecureRandom.uuid }
 end

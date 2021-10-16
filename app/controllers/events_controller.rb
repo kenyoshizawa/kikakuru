@@ -3,7 +3,7 @@ class EventsController < ApplicationController
   end
 
   def show
-    @event = Event.find(params[:id])
+    @event = Event.find_by!(url: params[:url])
   end
 
   def new
@@ -21,7 +21,7 @@ class EventsController < ApplicationController
       @user_event = @user.user_events.build(event_id: @event.id)
       @user_event.attendance = true
       @user_event.save
-      redirect_to event_path(@user_event.event_id)
+      redirect_to event_path(@event.url)
     else
       render :new
     end
@@ -45,6 +45,6 @@ class EventsController < ApplicationController
   end
 
   def event_params
-    params.require(:user).permit(event: [:title, :place, :started_at, :finished_at, :deadlined_at, :url])[:event]
+    params.require(:user).permit(event: [:title, :place, :started_at, :finished_at, :deadlined_at])[:event]
   end
 end

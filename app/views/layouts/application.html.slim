@@ -13,6 +13,8 @@ html
     = javascript_include_tag 'application'
 
   body
-    = render 'layouts/header'
-    = yield
-    = render 'layouts/footer'
+    div#wrapper
+      = render 'layouts/header'
+      main[role='main']
+        = yield
+      = render 'layouts/footer'

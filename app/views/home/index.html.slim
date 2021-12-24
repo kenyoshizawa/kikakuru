@@ -1,3 +1,28 @@
-h1 Home#index
-p Find me in app/views/home/index.html.slim
-= link_to '企画作成', new_event_path
+h2.title_home
+  | 次の誘いをキカクろう!
+p.title_home
+  | キカクルは簡単に遊びの計画を立てられる企画作成ツールです
+  br
+    | ブラウザは「Chrome」を推奨しています
+
+div.container
+  div.row
+    div.col-sm-4.col-6
+      div.box
+        div.img_plan
+          = image_tag 'img_add_schedule.png', class: 'img_plan'
+        p.title_plan
+          | タイトル
+        ul
+          li
+            | リスト１
+          li
+            | リスト２
+        = link_to '企画作成', new_event_path, class: 'btn-plan'
+
+    div.col-sm-4.col-6
+      div.box
+        = link_to '企画作成', new_event_path
+    div.col-sm-4.col-6
+      div.box
+        = link_to '企画作成', new_event_path

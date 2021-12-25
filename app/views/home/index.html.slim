@@ -13,10 +13,10 @@ div.container
           = image_tag 'img_add_schedule.png', class: 'img_plan'
         p.title_plan
           | タイトル
-        ul
-          li
+        ul.list-group-g
+          li.list-group-item-g
             | リスト１
-          li
+          li.list-group-item-g
             | リスト２
         = link_to '企画作成', new_event_path, class: 'btn-event btn-event-create'
 

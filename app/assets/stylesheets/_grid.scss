@@ -1,0 +1,34 @@
+.container {
+  max-width: 750px;
+}
+
+.col-sm-4 {
+  padding-right: 12px;
+  padding-left: 12px;
+  width: 225px;
+  height: 300px;
+  @media only screen and (max-width: 576px) {
+    margin-bottom:12px;
+  }
+}
+
+.box {
+  background:#fff;
+  // border: solid 1px #aaa;
+  border-radius: 10px;
+  box-shadow: 0 0 10px #e6e6e6;
+
+  .img_plan {
+    width: 100%;
+    height: 90px;
+    object-fit: cover;
+    border-radius: 10px 10px 0 0;
+  }
+  .title_plan {
+    padding: 16px 16px 0 16px;
+    font-size: 1.2em;
+    font-weight: 700;
+    // フォント
+    // font-family: M PLUS Rounded\ 1c,sans-serif;
+  }
+}

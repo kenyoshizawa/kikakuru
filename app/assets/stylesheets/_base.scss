@@ -19,12 +19,6 @@ body {
   font-weight: 500;
 }
 
-a {
-  color: transparent;
-  background-color: transparent;
+a:hover {
   text-decoration: none;
-
-  &:hover {
-    text-decoration: none;
-  }
 }

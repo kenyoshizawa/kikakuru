@@ -1,12 +1,14 @@
-.list-group-g {
+/* 枠（container） */
+.list-group-event {
   padding: 16px;
+}
 
-  .list-group-item-g {
-    padding: 4px 0 4px 22px;
-    margin-bottom: 0.1rem;
-    line-height: 1.1em;
-    font-size: 1em;
-    // チェックマーク
-    // background: url(../img/icon_check.c1d01928.svg) no-repeat 0 0;
-  }
+/* オブジェクトを構成する要素（content） */
+.list-group-item-event {
+  padding: 4px 0 4px 22px;
+  margin-bottom: 0.1rem;
+  line-height: 1.1em;
+  font-size: 1em;
+  // icon
+  // background: url(../img/icon_check.c1d01928.svg) no-repeat 0 0;
 }

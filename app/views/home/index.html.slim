@@ -13,16 +13,22 @@ div.container
           = image_tag 'img_add_schedule.png', class: 'img_plan'
         p.title_plan
           | タイトル
-        ul.list-group-g
-          li.list-group-item-g
+        ul.list-group-event
+          li.list-group-item-event
             | リスト１
-          li.list-group-item-g
+          li.list-group-item-event
             | リスト２
         = link_to '企画作成', new_event_path, class: 'btn-event btn-event-create'
 
     div.col-sm-4.col-6
       div.box
+        ul.list-group-event
+          li.list-group-item-event
+            | リスト１
+          li.list-group-item-event
+            | リスト２
         = link_to '企画作成', new_event_path, class: 'btn-event btn-event-create'
+
     div.col-sm-4.col-6
       div.box
         = link_to '企画作成', new_event_path

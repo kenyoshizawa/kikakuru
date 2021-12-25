@@ -21,7 +21,6 @@
   color: #fff;
 
   &:hover {
-    background-color: #e3165c;
-    color: #fff;
+    @extend .btn-event-create
   }
 }

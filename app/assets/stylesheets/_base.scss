@@ -18,3 +18,13 @@ body {
   line-height: 1;
   font-weight: 500;
 }
+
+a {
+  color: #212529;
+  background-color: transparent;
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: none;
+  }
+}

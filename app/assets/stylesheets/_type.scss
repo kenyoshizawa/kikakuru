@@ -1,7 +1,22 @@
+/* オブジェクトの見た目（skin） */
+.link-home {
+  color: #212529;
+
+  &:hover {
+   color: #212529;
+  }
+}
+
+/* オブジェクトの構造（structure） */
+.title-main {
+  display: inline-block;
+  vertical-align: middle;
+}
+
 /* オブジェクトの構造（structure） */
 .title-secondary {
   text-align: center;
-  margin-bottom: 30px;
+  padding-bottom: 30px;
 }
 
 /* オブジェクトの構造（structure） */

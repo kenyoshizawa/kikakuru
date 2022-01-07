@@ -1,3 +1,8 @@
+body {
+  line-height: 1;
+  font-weight: 500;
+}
+
 #wrapper {
   max-width: 1170px;
   margin: 0 auto;
@@ -5,18 +10,18 @@
   padding-right: 16px;
 }
 
-p {
+/* オブジェクトの構造（structure） */
+header {
+  padding: 8px 0 50px 0;
+}
+
+h1, h2, p {
   margin-bottom: 0;
 }
 
 ul {
   margin: 0;
   list-style: none;
-}
-
-body {
-  line-height: 1;
-  font-weight: 500;
 }
 
 a:hover {

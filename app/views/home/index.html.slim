@@ -8,7 +8,7 @@ div.title-container
 
 div.container.container-wrapper
   div.row
-    div.col-sm-4.col-6
+    div.col-sm-4.col-6.col-event
       div.flex-event
         div.img-event
           = image_tag 'img_delete_schedule.png', class: 'img-event'
@@ -21,7 +21,7 @@ div.container.container-wrapper
             | リスト２
         = link_to '企画作成', new_event_path, class: 'btn-event-structure btn-event-skin'
 
-    div.col-sm-4.col-6
+    div.col-sm-4.col-6.col-event
       div.flex-event
         div.img-event
           = image_tag 'img_add_schedule.png', class: 'img-event'

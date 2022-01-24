@@ -1,31 +1,40 @@
-h1 企画作成
-= form_with model: @user, url: events_path, local: true do |f|
-  .form-group.col-md-6
-    = f.label :'あなた（幹事）の名前'
-    = f.text_field :name, class: 'form-control'
+div.container.container-base
+  div.cards
+    div.card
+      div.card-header
+        h2.card-title
+          | 企画作成
 
-  = f.fields_for @event do |i|
-    .form-group.col-md-6
-      = i.label :'タイトル'
-      = i.text_field :title, class: 'form-control'
-    .form-group.col-md-6
-      = i.label :'場所'
-      = i.text_field :place, class: 'form-control'
+      div.card-content
+        div.event-form
+          = form_with model: @user, url: events_path, local: true do |f|
+            .form-group
+              = f.label :'あなた（幹事）の名前', class: 'form-label'
+              = f.text_field :name, class: 'form-control input-name'
 
-      = link_to '食べログ', 'https://tabelog.com/', target: :_blank
-      = link_to 'Google Map', 'https://www.google.co.jp/', target: :_blank
-      = link_to 'Zoom', 'https://us04web.zoom.us/', target: :_blank
-      = link_to 'ミーティングURL発行方法', 'https://support.zoom.us/hc/ja/articles/201362183-%E4%BB%96%E3%81%AE%E3%83%A6%E3%83%BC%E3%82%B6%E3%83%BC%E3%82%92%E3%83%9F%E3%83%BC%E3%83%86%E3%82%A3%E3%83%B3%E3%82%B0%E3%81%AB%E6%8B%9B%E5%BE%85%E3%81%99%E3%82%8B%E3%81%AB%E3%81%AF', target: :_blank
+            = f.fields_for @event do |i|
+              .form-group
+                = i.label :'タイトル', class: 'form-label'
+                = i.text_field :title, class: 'form-control', placeholder: '企画名'
+              .form-group
+                = i.label :'場所', class: 'form-label'
+                = i.text_field :place, class: 'form-control', placeholder: 'URL'
+                span.form-text.text-danger
+                  | ※食べログ、またはGoogle Mapから開催場所のURLを貼り付けてください。
+                ul.list-group-place
+                  li
+                    = link_to '食べログ', 'https://tabelog.com/', target: :_blank
+                  li
+                    = link_to 'Google Map', 'https://www.google.co.jp/maps/?hl=ja', target: :_blank
+              .form-group
+                = i.label :'開始時間', class: 'form-label'
+                = i.time_field :started_at, class: 'form-control input-time'
+              .form-group
+                = i.label :'終了時間', class: 'form-label'
+                = i.time_field :finished_at, class: 'form-control input-time'
+              .form-group
+                = i.label :'回答期限', class: 'form-label'
+                = i.time_field :deadlined_at, class: 'form-control input-time'
 
-    .form-group.col-md-6
-      = i.label :'開始時間'
-      = i.time_field :started_at, class: 'form-control'
-    .form-group.col-md-6
-      = i.label :'終了時間'
-      = i.time_field :finished_at, class: 'form-control'
-    .form-group.col-md-6
-      = i.label :'回答期限'
-      = i.time_field :deadlined_at, class: 'form-control'
-
-  .form-group.col-md-6
-    = f.submit '作成する', class: 'btn btn-primary'
+            .card-link.d-flex.justify-content-center
+              = f.submit '作成する', class: 'btn-create-structure btn-event-skin'

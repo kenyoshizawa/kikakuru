@@ -1,0 +1,35 @@
+/* 枠（container） */
+.cards {
+  margin: 1rem 0;
+  touch-action: pan-y;
+
+  @media only screen and (min-width: 576px) {
+    max-width: 40rem;
+    margin: 2rem auto;
+  }
+}
+
+/* 枠（container） */
+.card {
+  border: none;
+  display: block;
+}
+
+/* オブジェクトを構成する要素（content） */
+.card-header {
+  border: none;
+  background: none;
+  padding: 0.5rem 1.5rem;
+}
+
+/* オブジェクトを構成する要素（content） */
+.card-content {
+  border-top: 1px solid #f8f8f8;
+  padding: 1rem 1.5rem 1.5rem;
+}
+
+/* オブジェクトを構成する要素（content） */
+.card-link {
+  border-top: 1px solid #f8f8f8;
+  padding: 0.5rem;
+}

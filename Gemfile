@@ -15,6 +15,8 @@ gem 'mysql2', '~> 0.5.3'
 gem 'jbuilder', '~> 2.5'
 gem 'slim-rails'
 gem 'meta-tags'
+gem 'fullcalendar-rails', '~> 3.9'
+gem 'momentjs-rails', '~> 2.20', '>= 2.20.1'
 
 #Assets
 gem 'sass-rails', '~> 5.0'

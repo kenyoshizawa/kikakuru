@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_02_19_073919) do
+ActiveRecord::Schema.define(version: 2022_01_27_120301) do
 
   create_table "events", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "title", null: false
@@ -23,6 +23,14 @@ ActiveRecord::Schema.define(version: 2021_02_19_073919) do
     t.string "deleted_message"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "schedules", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.datetime "date", null: false
+    t.bigint "event_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["event_id"], name: "index_schedules_on_event_id"
   end
 
   create_table "user_events", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
@@ -43,6 +51,7 @@ ActiveRecord::Schema.define(version: 2021_02_19_073919) do
     t.datetime "updated_at", null: false
   end
 
+  add_foreign_key "schedules", "events"
   add_foreign_key "user_events", "events"
   add_foreign_key "user_events", "users"
 end

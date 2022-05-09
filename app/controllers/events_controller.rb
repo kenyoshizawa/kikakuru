@@ -1,12 +1,15 @@
 class EventsController < ApplicationController
+  before_action :set_event, only: %i[show edit update destroy]
+
   def index
   end
 
   def show
-    @event = Event.find_by!(url: params[:url])
   end
 
   def new
+    # cookiesが存在したら、そのモデルを渡す
+    # @user = current_user.present? ? current_user : User.new(name: cookies[:organizer_name])
     @user = User.new(name: cookies[:organizer_name])
     @event = Event.new
   end
@@ -21,6 +24,10 @@ class EventsController < ApplicationController
       @user_event = @user.user_events.build(event_id: @event.id)
       @user_event.attendance = true
       @user_event.save
+
+      @schedules = Form::ScheduleCollection.new(schedule_collection_params, @event.id)
+      @schedules.save
+
       redirect_to event_path(@event.url)
     else
       render :new
@@ -28,8 +35,16 @@ class EventsController < ApplicationController
   end
 
   def edit
-    @user = User.find(cookies.signed[:user_id])
-    @event = Event.find(params[:id])
+  end
+
+  def update
+    # authorize(@article)
+    # if @article.update_considering_published(article_params)
+    #   flash[:notice] = '更新しました'
+    #   redirect_to edit_admin_article_path(@article.uuid)
+    # else
+    #   render :edit
+    # end
   end
 
   def destroy
@@ -41,10 +56,24 @@ class EventsController < ApplicationController
   private
 
   def user_params
-    params.require(:user).permit(:name)
+    params.require(:event).permit(user: :name)[:user]
   end
 
   def event_params
-    params.require(:user).permit(event: [:title, :place, :started_at, :finished_at, :deadlined_at])[:event]
+    params.require(:event).permit(:title, :place, :started_at, :finished_at, :deadlined_at)
+  end
+
+  def set_event
+    @event = Event.find_by!(url: params[:url])
+  end
+
+  def schedule_collection_params
+    # 配列
+    # $("#event_schedules_date").val(select_date);
+    # (2) ['2022-04-11', '2022-04-12']
+    # = e.hidden_field :date, name: 'event[schedules][]', value: ''
+    # value="2022-04-11,2022-04-12"
+    # => <ActionController::Parameters {"schedules"=>["2022-04-11,2022-04-12"]} permitted: true>
+    params.require(:event).permit(schedules: [])
   end
 end

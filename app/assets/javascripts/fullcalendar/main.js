@@ -2,6 +2,12 @@ var select_date = [];
 
 $(function() {
   $('#calendar').fullCalendar({
+    locale: 'ja',
+    header: {
+      left: 'prev',
+      center: 'title',
+      right: 'next'
+    },
     dayClick: function(date) {
       // クリックした日付を"YYYY-MM-DD"形式で変数に代入
       var datetime = moment(date).format("YYYY-MM-DD");

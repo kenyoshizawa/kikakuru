@@ -1,0 +1,24 @@
+/* 日付を枠の高さいっぱいに */
+.fc-content-skeleton, table, thead {
+  height: 100%;
+}
+
+/* 日付を枠の中心に */
+.fc-ltr .fc-basic-view .fc-day-top .fc-day-number {
+  // float: right;をオーバーライド
+  float: none;
+}
+.fc-day-number {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  min-height: 100%;
+}
+
+/* 最小のセルの高さを40pxに固定 */
+@media only screen and (max-width: 615px) {
+  .fc-basic-view .fc-body .fc-row {
+    min-height: 40px;
+  }
+}

@@ -28,13 +28,15 @@ div.container.container-base
                   = link_to 'Google Map', 'https://www.google.co.jp/maps/?hl=ja', target: :_blank
             .form-group
               = f.label :'集合場所', class: 'form-label'
-              = f.text_field  :set_place, class: 'form-control form-disabled', placeholder: '現地（上記URL）', disabled: true
+              = f.text_field  :set_place, class: 'form-control mb-5', placeholder: '現地（上記URL）', disabled: true
+
             .form-group
               = f.label :'日程候補', class: 'form-label'
-
               div#calendar
               = f.fields_for :schedules do |e|
                 = e.hidden_field :date, name: 'event[schedules][]', value: ''
+              span.form-text.text-danger.mb-5
+                | ※候補を複数選択できます。
 
             .form-group
               = f.label :'開始時間', class: 'form-label'

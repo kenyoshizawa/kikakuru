@@ -12,8 +12,13 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  text-align: center;
+  // text-align: center;
   min-height: 100%;
+
+  /* min-height: 40px;以降はセルの高さ40pxに */
+  @media only screen and (max-width: 615px) {
+    height: 40px;
+  }
 }
 
 /* 最小のセルの高さを40pxに固定 */
@@ -21,4 +26,9 @@
   .fc-basic-view .fc-body .fc-row {
     min-height: 40px;
   }
+}
+
+/* 曜日の上下のスペースをあける */
+div.fc-widget-header {
+  padding: 5px 0;
 }

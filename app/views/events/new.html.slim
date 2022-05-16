@@ -28,6 +28,7 @@ div.container.container-base
                   = link_to 'Google Map', 'https://www.google.co.jp/maps/?hl=ja', target: :_blank
             .form-group
               = f.label :'集合場所', class: 'form-label'
+              = f.text_field  :set_place, class: 'form-control form-disabled', placeholder: '現地（上記URL）', disabled: true
             .form-group
               = f.label :'日程候補', class: 'form-label'
 

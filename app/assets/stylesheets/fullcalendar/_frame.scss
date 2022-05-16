@@ -1,0 +1,9 @@
+/* 曜日、日にちの枠削除 */
+td.fc-widget-header, th.fc-widget-header, td.fc-widget-content {
+  border: none;
+}
+
+/* 曜日の下にアンダーライン */
+td.fc-widget-header {
+  border-bottom: 1px solid #ebeef5;
+}

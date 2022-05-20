@@ -38,15 +38,15 @@ div.container.container-base
               span.form-text.text-danger.mb-5
                 | ※候補を複数選択できます。
 
-            .form-group
+            .form-group.clockpicker
               = f.label :'開始時間', class: 'form-label'
-              = f.time_field :started_at, class: 'form-control input-time'
-            .form-group
+              = f.text_field :started_at, class: 'form-control input-time'
+            .form-group.clockpicker
               = f.label :'終了時間', class: 'form-label'
-              = f.time_field :finished_at, class: 'form-control input-time'
+              = f. text_field :finished_at, class: 'form-control input-time'
             .form-group
               = f.label :'回答期限', class: 'form-label'
-              = f.time_field :deadlined_at, class: 'form-control input-time'
+              = f.datetime_field :deadlined_at, class: 'form-control'
 
             .card-link.d-flex.justify-content-center
               = f.submit '作成する', class: 'btn-create-structure btn-event-skin'

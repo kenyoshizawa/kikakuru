@@ -17,6 +17,7 @@ gem 'slim-rails'
 gem 'meta-tags'
 gem 'fullcalendar-rails', '~> 3.9'
 gem 'momentjs-rails', '~> 2.20', '>= 2.20.1'
+gem 'rails-i18n', '~> 5.1', '>= 5.1.3'
 
 #Assets
 gem 'sass-rails', '~> 5.0'

@@ -29,5 +29,8 @@ module Kikakuru
 
     # Don't generate system test files.
     config.generators.system_tests = nil
+    config.time_zone = 'Tokyo'
+    config.active_record.default_timezone= :local
+    config.active_record.time_zone_aware_types = [:datetime, :time]
   end
 end

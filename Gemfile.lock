@@ -80,6 +80,7 @@ GEM
       factory_bot (~> 6.2.0)
       railties (>= 5.0.0)
     ffi (1.15.4)
+    flatpickr (4.6.11.0)
     font-awesome-rails (4.7.0.7)
       railties (>= 3.2, < 7)
     font-awesome-sass (5.4.1)
@@ -256,6 +257,7 @@ DEPENDENCIES
   byebug
   coffee-rails (~> 4.2)
   factory_bot_rails
+  flatpickr (~> 4.6, >= 4.6.11.0)
   font-awesome-rails
   font-awesome-sass (~> 5.4.1)
   fullcalendar-rails (~> 3.9)

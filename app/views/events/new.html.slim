@@ -46,7 +46,7 @@ div.container.container-base
               = f. text_field :finished_at, class: 'form-control input-time'
             .form-group
               = f.label :'回答期限', class: 'form-label'
-              = f.datetime_field :deadlined_at, class: 'form-control'
+              = f.text_field :deadlined_at, class: 'form-control bg-transparent', id: 'flatpickr'
 
             .card-link.d-flex.justify-content-center
               = f.submit '作成する', class: 'btn-create-structure btn-event-skin'

@@ -18,4 +18,6 @@
 //= require bootstrap-sprockets
 //= require rails-ujs
 //= require activestorage
+//= require flatpickr
+//= require flatpickr/l10n/ja
 //= require_tree .

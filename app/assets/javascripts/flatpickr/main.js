@@ -23,8 +23,6 @@ $(function() {
     disableMobile: true,
     // カレンダーのヘッダーの月表示の方法
     monthSelectorType: 'static',
-    // 初期日時の「時間」を指定します。
-    defaultHour: 12,
     // 特定日付以外を無効化
     enable: [
       {

@@ -1,7 +1,28 @@
+// 年変更の矢印非表示
 .flatpickr-current-month {
   .numInputWrapper {
     span.arrowUp, span.arrowDown {
       display: none;
+    }
+  }
+}
+
+// 時間設定の矢印を常に表示
+.flatpickr-time {
+   input:hover, input:focus {
+     background: none;
+   }
+
+   input.flatpickr-hour {
+     font-weight: normal;
+   }
+
+  .numInputWrapper {
+    pointer-events: none;
+    span.arrowUp, span.arrowDown {
+      opacity: 1;
+      background: rgba(0, 0, 0, 0.1);
+      pointer-events: auto;
     }
   }
 }

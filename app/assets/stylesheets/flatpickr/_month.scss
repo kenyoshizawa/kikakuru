@@ -1,0 +1,30 @@
+// 年月の表示を入れ替える
+.numInputWrapper {
+  .cur-year {
+    order: 1;
+    pointer-events: none;
+  }
+  &:hover {
+    background: none;
+  }
+}
+
+.flatpickr-current-month {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  span.cur-month {
+    font-weight: inherit;
+    order: 2;
+    margin-left: -17px;
+
+    &:before  {
+       content: "年　"
+    }
+
+    &:hover {
+      background: none;
+    }
+  }
+}

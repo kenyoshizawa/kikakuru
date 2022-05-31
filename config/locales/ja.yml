@@ -1,5 +1,6 @@
 ja:
   time:
     formats:
-      default: "%Y/%m/%d %H:%M"
-      time: '%H:%M'
+      Ymd_HM: "%Y/%m/%d %H:%M"
+      HM: '%H:%M'
+      Ymd: '%Y/%m/%d'

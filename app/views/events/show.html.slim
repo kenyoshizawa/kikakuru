@@ -1,6 +1,62 @@
-h1 Events#show
-= current_user.name
-= @event.title
-= @event.schedules
-/ = link_to '企画を編集する', edit_event_path(@event.url)
-/ = link_to '企画削除', event_path(@event.url)
+div.container.container-base
+  div.cards
+    div.card
+      div.card-header
+        h2.card-title
+          | 企画詳細
+
+      div.card-content
+        div.mb-5
+          p.mb-2.font-weight-520.inner-label
+            | この企画のURL
+          div.form-control.text-truncate 
+            = 'http://localhost:3000/events/' + @event.url
+          ul.p-0
+            li.list-group-item-event.text-danger.form-text.pl-0
+              | URLを友達に送ってください
+            li.list-group-item-event.text-danger.form-text.pl-0
+              | 友達が企画を確認するとメンバーに名前が追加されます
+
+        div.mb-5
+          h2.mb-2.font-weight-520
+            = @event.title
+        div.mb-5
+          p.mb-2.font-weight-520.inner-label
+            | 場所
+          div.inner-container
+            = link_to 'google mapから地名取得', @event.place, target: :_blank
+
+        div.mb-5
+          p.mb-2.font-weight-520.inner-label
+            | 集合場所
+          div.inner-container
+            | 上記URL
+        div.mb-5
+          p.mb-2.font-weight-520.inner-label
+            | 日程候補
+          div.row
+            = render partial: 'schedules/schedules', collection: @schedules, as: :schedule
+        div.mb-5
+          p.mb-2.font-weight-520.inner-label
+            | 開始時間
+          div.inner-container
+            = l @event.started_at, format: :HM
+        div.mb-5
+          p.mb-2.font-weight-520.inner-label
+            | 終了時間
+          div.inner-container
+            = l @event.finished_at, format: :HM
+        div.mb-5
+          p.mb-2.font-weight-520.inner-label
+            | メンバー
+          div.inner-container
+            = current_user.name
+
+        div.mb-5
+          p.mb-2.font-weight-520.inner-label
+            | 回答期限
+          div.inner-container
+            = l @event.deadlined_at, format: :Ymd_HM
+
+                  / = link_to '企画を編集する', edit_event_path(@event.url)
+                  / = link_to '企画削除', event_path(@event.url)

@@ -5,6 +5,8 @@ class EventsController < ApplicationController
   end
 
   def show
+    @event = Event.find_by(url: params[:url])
+    @schedules = @event.schedules.order(date: :asc)
   end
 
   def new

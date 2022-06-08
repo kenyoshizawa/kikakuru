@@ -11,6 +11,11 @@ $(function() {
 
     // 選択状態のテキストをコピーする
     document.execCommand('copy');
-    window.alert('クリップボードにコピーしました。');
+
+    // ポップアップ表示
+    $('.modal-pop').fadeIn(0);
+    setTimeout(function(){
+      $('.modal-pop').stop().fadeOut(200);
+    },1000);
   });
 });

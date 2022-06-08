@@ -9,8 +9,15 @@ div.container.container-base
         div.mb-5
           p.mb-2.font-weight-520.inner-label
             | この企画のURL
-          div.form-control.text-truncate 
-            = 'http://localhost:3000/events/' + @event.url
+          div.row
+            div.col-10.pr-0
+              div.form-control.text-truncate
+                span#copyTarget
+                  = 'http://localhost:3000/events/' + @event.url
+            div.col-2.pl-0.mb-2
+              button#copy-url.btn-create-structure.btn-event-skin
+                span.fa.fa-fw.fa-clipboard
+
           ul.p-0
             li.list-group-item-event.text-danger.form-text.pl-0
               | URLを友達に送ってください

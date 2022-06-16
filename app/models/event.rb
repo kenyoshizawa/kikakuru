@@ -3,11 +3,11 @@ class Event < ApplicationRecord
   has_many :users, through: :user_events, dependent: :destroy
   has_many :schedules
 
-  # validates :title, presence: true, length: { maximum: 20 }
-  # validates :place, length: { maximum: 200 }, place_url: true
-  # validates :started_at
-  # validates :finished_at
-  # validates :deadlined_at
+  validates :title, presence: true, length: { maximum: 5 }
+  validates :place, presence: true
+  validates :started_at, presence: true
+  validates :finished_at, presence: true
+  validates :deadlined_at, presence: true
   # validates :url
 
   before_create -> { self.url = SecureRandom.uuid }

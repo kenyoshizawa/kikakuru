@@ -11,7 +11,7 @@ div.container.container-base
             = f.fields_for @user do |i|
               .form-group
                 = i.label :'あなた（幹事）の名前', class: 'form-label'
-                = i.text_field :name, class: 'form-control input-name'
+                = i.text_field :name, class: 'form-control input-name', placeholder: '10文字以内'
                 = render 'layouts/error_messages', object: i.object, attribute: :name
 
             .form-group

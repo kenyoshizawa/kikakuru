@@ -20,4 +20,5 @@
 //= require activestorage
 //= require flatpickr
 //= require flatpickr/l10n/ja
+//= require semantic-ui
 //= require_tree .

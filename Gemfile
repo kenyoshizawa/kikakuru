@@ -19,6 +19,7 @@ gem 'fullcalendar-rails', '~> 3.9'
 gem 'momentjs-rails', '~> 2.20', '>= 2.20.1'
 gem 'rails-i18n', '~> 5.1', '>= 5.1.3'
 gem 'flatpickr', '~> 4.6', '>= 4.6.11.0'
+gem 'semantic-ui-sass', '~> 2.4', '>= 2.4.4.0'
 
 #Assets
 gem 'sass-rails', '~> 5.0'

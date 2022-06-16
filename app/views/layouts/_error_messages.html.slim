@@ -1,0 +1,5 @@
+- if object.errors.include?(attribute)
+  div.mb-3
+    p.ui.pointing.red.basic.label
+        i.attention.circle.icon
+        = object.errors.full_messages_for(attribute).first

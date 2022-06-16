@@ -12,13 +12,17 @@ div.container.container-base
               .form-group
                 = i.label :'あなた（幹事）の名前', class: 'form-label'
                 = i.text_field :name, class: 'form-control input-name'
+                = render 'layouts/error_messages', object: i.object, attribute: :name
 
             .form-group
               = f.label :'タイトル', class: 'form-label'
               = f.text_field :title, class: 'form-control', placeholder: '企画名'
+              = render 'layouts/error_messages', object: f.object, attribute: :title
+
             .form-group
               = f.label :'場所', class: 'form-label'
               = f.text_field :place, class: 'form-control', placeholder: 'URL'
+              = render 'layouts/error_messages', object: f.object, attribute: :place
               span.form-text.text-danger
                 | ※食べログ、またはGoogle Mapから開催場所のURLを貼り付けてください。
               ul.list-group-place
@@ -26,6 +30,7 @@ div.container.container-base
                   = link_to '食べログ', 'https://tabelog.com/', target: :_blank
                 li
                   = link_to 'Google Map', 'https://www.google.co.jp/maps/?hl=ja', target: :_blank
+
             .form-group
               = f.label :'集合場所', class: 'form-label'
               = f.text_field  :set_place, class: 'form-control mb-5', placeholder: '現地（上記URL）', disabled: true
@@ -41,9 +46,13 @@ div.container.container-base
             .form-group.started-clockpicker
               = f.label :'開始時間', class: 'form-label'
               = f.text_field :started_at, class: 'form-control input-time bg-transparent', readonly: ''
+              = render 'layouts/error_messages', object: f.object, attribute: :started_at
+
             .form-group.finished-clockpicker
               = f.label :'終了時間', class: 'form-label'
               = f. text_field :finished_at, class: 'form-control input-time bg-transparent', readonly: ''
+              = render 'layouts/error_messages', object: f.object, attribute: :finished_at
+
             .form-group
               = f.label :'回答期限', class: 'form-label'
               = f.text_field :deadlined_at, class: 'form-control bg-transparent', id: 'flatpickr'

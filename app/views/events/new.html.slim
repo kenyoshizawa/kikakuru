@@ -15,8 +15,8 @@ div.container.container-base
                 = render 'layouts/error_messages', object: i.object, attribute: :name
 
             .form-group
-              = f.label :'タイトル', class: 'form-label'
-              = f.text_field :title, class: 'form-control', placeholder: '企画名'
+              = f.label :'企画タイトル', class: 'form-label'
+              = f.text_field :title, class: 'form-control', placeholder: '20文字以内'
               = render 'layouts/error_messages', object: f.object, attribute: :title
 
             .form-group

@@ -4,7 +4,7 @@ class Event < ApplicationRecord
   has_many :schedules
 
   validates :title, presence: true, length: { maximum: 20 }
-  validates :place, presence: true
+  validates :place, presence: true, place_format: true
   validates :started_at, presence: true
   validates :finished_at, presence: true
   validates :deadlined_at, presence: true

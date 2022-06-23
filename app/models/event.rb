@@ -7,6 +7,8 @@ class Event < ApplicationRecord
   validates :place, presence: true, place_format: true
   validates :started_at, presence: true
   validates :finished_at, presence: true
+  validates_with EventRangeValidator, unless: -> { started_at.blank? || finished_at.blank? }
+
   validates :deadlined_at, presence: true
   # validates :url
 

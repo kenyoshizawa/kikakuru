@@ -28,9 +28,7 @@ class EventsController < ApplicationController
       @user_event.save
 
       @schedules = Form::ScheduleCollection.new(schedule_collection_params, @event.id)
-      @schedules.save
-
-      redirect_to event_path(@event.url)
+      redirect_to event_path(@event.url) if @schedules.save
     else
       render :new
     end

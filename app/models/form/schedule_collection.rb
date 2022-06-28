@@ -3,6 +3,8 @@ class Form::ScheduleCollection < Form::Base
   attribute :event_id, :integer
   attr_accessor :schedules
 
+  validates :date, presence: true
+
   def initialize(attributes = {}, event_id)
     super attributes
 
@@ -16,12 +18,27 @@ class Form::ScheduleCollection < Form::Base
     self.schedules = collection.map { |v| Schedule.new(date: v, event_id: event_id) }
   end
 
+  # def save
+  #   Schedule.transaction do
+  #     self.schedules.map(&:save!)
+  #   end
+  #     return true
+  #   rescue => e
+  #     return false
+  # end
+
   def save
-    Schedule.transaction do
-      self.schedules.map(&:save!)
-    end
-      return true
-    rescue => e
+    return false unless valid?
+    Schedule.transaction { self.schedules.map(&:save!) }
+    true
+  end
+
+  def valid?
+    if self.schedules.empty?
+      # self.errors[attribute] << (options[:message] || 'を１つ以上選択してください')
+      # self.errors.add(:date, '日付を１つ以上選択してください')
       return false
+    end
+    self.schedules.map(&:valid?)
   end
 end

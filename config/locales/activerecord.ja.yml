@@ -1,0 +1,26 @@
+ja:
+  activerecord:
+    attributes:
+      user:
+        name: '幹事の名前'
+      event:
+        title: '企画タイトル'
+        place: 'GoogleMapのURL'
+        started_at: '企画の開始時間'
+        finished_at: '企画の終了時間'
+    errors:
+      models:
+        user:
+          attributes:
+            name:
+              blank: 'を入力してください'
+        event:
+          attributes:
+            title:
+              blank: 'を入力してください'
+            place:
+              blank: 'を貼り付けてください'
+            started_at:
+              blank: 'を選択してください'
+            finished_at:
+              blank: 'を選択してください'

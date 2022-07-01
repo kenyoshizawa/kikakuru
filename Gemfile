@@ -11,7 +11,7 @@ gem 'puma', '~> 3.11'
 # Database server
 gem 'mysql2', '~> 0.5.3'
 
-# UI/UX
+#UI/UX
 gem 'jbuilder', '~> 2.5'
 gem 'slim-rails'
 gem 'meta-tags'
@@ -21,7 +21,7 @@ gem 'rails-i18n', '~> 5.1', '>= 5.1.3'
 gem 'flatpickr', '~> 4.6', '>= 4.6.11.0'
 gem 'semantic-ui-sass', '~> 2.4', '>= 2.4.4.0'
 
-# Assets
+#Assets
 gem 'sass-rails', '~> 5.0'
 gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails', '~> 4.2'
@@ -31,11 +31,8 @@ gem 'font-awesome-rails'
 gem 'font-awesome-sass', '~> 5.4.1'
 gem 'jquery-rails'
 
-# Authorization
-gem 'pundit', '~> 2.2'
-
 group :development, :test do
-  # Debugger
+  #Debugger
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
   gem 'pry-byebug'
   gem 'better_errors'
@@ -44,7 +41,7 @@ group :development, :test do
   gem 'pry-doc'
   gem 'pry-rails'
 
-  # Test
+  #Test
   gem 'factory_bot_rails'
   gem 'rspec-rails'
 end

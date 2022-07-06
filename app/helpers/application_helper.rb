@@ -1,4 +1,6 @@
 module ApplicationHelper
   include MetaTagsHelper
-  include SessionsHelper
+  include UserCookiesHelper
+  include EventCookiesHelper
+  include UserEventCookiesHelper
 end

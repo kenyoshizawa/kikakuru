@@ -16,7 +16,7 @@ div.container.container-base
             div.col-10.pr-0
               div.form-control.text-truncate
                 span#copyTarget
-                  = 'http://localhost:3000/events/' + @event.url
+                  = 'http://localhost:3000/events/' + current_event.url
             div.col-2.pl-0.mb-2
               button#copy-url.btn-create-structure.btn-event-skin
                 span.fa.fa-fw.fa-clipboard
@@ -29,12 +29,12 @@ div.container.container-base
 
         div.mb-5
           h2.mb-2.font-weight-520
-            = @event.title
+            = current_event.title
         div.mb-5
           p.mb-2.font-weight-520.inner-label
             | 場所
           div.inner-container
-            = link_to 'google mapから地名取得', @event.place, target: :_blank
+            = link_to 'google mapから地名取得', current_event.place, target: :_blank
 
         div.mb-5
           p.mb-2.font-weight-520.inner-label
@@ -50,23 +50,23 @@ div.container.container-base
           p.mb-2.font-weight-520.inner-label
             | 開始時間
           div.inner-container
-            = l @event.started_at, format: :HM
+            = l current_event.started_at, format: :HM
         div.mb-5
           p.mb-2.font-weight-520.inner-label
             | 終了時間
           div.inner-container
-            = l @event.finished_at, format: :HM
+            = l current_event.finished_at, format: :HM
         div.mb-5
           p.mb-2.font-weight-520.inner-label
             | メンバー
           div.inner-container
-            = current_user.name
+            = render partial: 'users/user_name', collection: current_event.users, as: :user
 
         div.mb-5
           p.mb-2.font-weight-520.inner-label
             | 回答期限
           div.inner-container
-            = l @event.deadlined_at, format: :Ymd_HM
+            = l current_event.deadlined_at, format: :Ymd_HM
 
                   / = link_to '企画を編集する', edit_event_path(@event.url)
                   / = link_to '企画削除', event_path(@event.url)

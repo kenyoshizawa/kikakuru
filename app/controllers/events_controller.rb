@@ -1,18 +1,20 @@
 class EventsController < ApplicationController
-  before_action :set_event, only: %i[show edit update destroy]
+  before_action :set_event, only: %i[show]
 
   def index
   end
 
   def show
-    @event = Event.find_by(url: params[:url])
-    @schedules = @event.schedules.order(date: :asc)
+    remember_event @event
+    @schedules = current_event.schedules.order(date: :asc)
+
+    if current_user.nil? || first_access?
+      redirect_to new_user_path
+    end
   end
 
   def new
-    # cookiesが存在したら、そのモデルを渡す
-    # @user = current_user.present? ? current_user : User.new(name: cookies[:organizer_name])
-    @user = User.new(name: cookies[:organizer_name])
+    @user = current_user.nil? ? User.new : User.new(name: current_user.name)
     @event = Event.new
   end
 
@@ -22,7 +24,7 @@ class EventsController < ApplicationController
     @user.role = :organizer
 
     if @user.save && @event.save
-      remember @user
+      remember_user @user
       @user_event = @user.user_events.build(event_id: @event.id)
       @user_event.attendance = true
       @user_event.save

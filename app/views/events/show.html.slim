@@ -20,7 +20,6 @@ div.container.container-base
             div.col-2.pl-0.mb-2
               button#copy-url.btn-create-structure.btn-event-skin.btn-adjust-semantic-ui-sass
                 span.fa.fa-fw.fa-clipboard
-
           ul.p-0
             li.list-group-item-event.text-danger.form-text.pl-0
               | URLを友達に送ってください
@@ -45,7 +44,12 @@ div.container.container-base
           p.mb-2.font-weight-520.inner-label
             | 日程候補
           div.row
-            = render partial: 'schedules/schedules', collection: @schedules, as: :schedule
+            = render partial: 'schedules/schedule', collection: @schedules, as: :schedule
+          ul.p-0
+            li.list-group-item-event.text-danger.form-text.pl-0
+              | 日程候補の中から都合が悪い日を選択し、削除してください
+            li.list-group-item-event.text-danger.form-text.pl-0
+              | 企画日程は１つ以上残してください
         div.mb-5
           p.mb-2.font-weight-520.inner-label
             | 開始時間
@@ -59,8 +63,9 @@ div.container.container-base
         div.mb-5
           p.mb-2.font-weight-520.inner-label
             | メンバー
-          div.inner-container
-            = render partial: 'users/user_name', collection: current_event.users, as: :user
+          div.container
+            ul.list-group
+              = render partial: 'users/user_name', collection: current_event.users, as: :user
 
         div.mb-5
           p.mb-2.font-weight-520.inner-label

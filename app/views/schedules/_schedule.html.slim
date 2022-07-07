@@ -1,0 +1,4 @@
+div.col-sm-4.col-6
+  div class="col-schedule" id="schedule-#{schedule.id}"
+    = link_to schedule_path(schedule.id), method: :delete, remote: true, data: { confirm: '日付を削除しますか？' } do
+      = l schedule.date, format: :Ymd

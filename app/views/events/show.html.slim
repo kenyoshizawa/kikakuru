@@ -75,3 +75,4 @@ div.container.container-base
 
                   / = link_to '企画を編集する', edit_event_path(@event.url)
                   / = link_to '企画削除', event_path(@event.url)
+        = link_to 'チャット', event_messages_path(current_event.url)

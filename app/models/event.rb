@@ -2,6 +2,7 @@ class Event < ApplicationRecord
   has_many :user_events, dependent: :destroy
   has_many :users, through: :user_events, dependent: :destroy
   has_many :schedules
+  has_many :messages
 
   validates :title, presence: true, length: { maximum: 20 }
   validates :place, presence: true, place_format: true

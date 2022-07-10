@@ -1,6 +1,7 @@
 class User < ApplicationRecord
   has_many :user_events, dependent: :destroy
   has_many :events, through: :user_events
+  has_many :messages
 
   enum role: { friend: 0, organizer: 1 }
 

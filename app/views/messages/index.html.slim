@@ -1,5 +1,8 @@
 h1
   | Chat room
-
 div#messages
   = render partial: 'messages/message', collection: @messages, as: :message
+form
+  label
+    | Say something:
+  input[type="text" data-behavior="chat_speaker"]

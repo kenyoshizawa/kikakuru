@@ -5,4 +5,5 @@ Rails.application.routes.draw do
   resources :events, param: :url do
     resources :messages, only: %i[index]
   end
+  mount ActionCable.server => '/cable'
 end

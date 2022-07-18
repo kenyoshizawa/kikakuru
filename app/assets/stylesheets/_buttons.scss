@@ -1,3 +1,5 @@
+/* オブジェクトを構成する要素（content） */
+// ホーム画面 -> イベント作成フォーム
 /* オブジェクトの構造（structure） */
 .btn-event-structure {
   // position: absolute;
@@ -25,6 +27,9 @@
   }
 }
 
+
+/* オブジェクトを構成する要素（content） */
+// event作成
 /* オブジェクトの構造（structure） */
 .btn-create-structure {
   display: inline-block;
@@ -43,4 +48,36 @@
 
 .btn-adjust-semantic-ui-sass {
   padding: 9px 20px;
+}
+
+
+/* オブジェクトを構成する要素（content） */
+// イベント詳細ページ -> チャット画面
+/* オブジェクトの構造（structure） */
+.btn-chat-structure {
+  display: block;
+  text-align: center;
+  font-size: 14px;
+  font-weight: 500;
+  padding: 11px 20px;
+  border: 1px solid #dcdfe6;
+  border-radius: 4px;
+  transition: all 0.3s ease 0s;
+
+  &:hover {
+   opacity: 0.6;
+ }
+}
+
+/* オブジェクトの見た目（skin） */
+.btn-chat-skin {
+  color: #004d40;
+  background-color: #e6edec;
+  border-color: #99b8b3;
+
+  &:hover {
+    color: #fff;
+    background-color: #004d40;
+    border-color: #004d40;
+  }
 }

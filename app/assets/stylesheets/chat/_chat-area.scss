@@ -1,0 +1,15 @@
+/* 枠（container） */
+/* オブジェクトの構造（structure） */
+.chat-area-structure {
+  display: block;
+  height: 400px;
+  padding: 10px;
+  white-space: pre-wrap;
+  overflow: scroll;
+  word-wrap: break-word;
+}
+
+/* オブジェクトの見た目（skin） */
+.chat-area-skin {
+  background-color: #F4F5F7;
+}

@@ -1,0 +1,10 @@
+/* オブジェクトの構造（structure） */
+/* default */
+
+/* オブジェクトの見た目（skin） */
+.btn-message-skin {
+  &:focus {
+    outline: none;
+    box-shadow: none;
+  }
+}

@@ -1,0 +1,18 @@
+/* オブジェクトの構造（structure） */
+.input-message-structure {
+  font: 15px/24px sans-serif;
+  box-sizing: border-box;
+  padding: 0.3em;
+  letter-spacing: 1px;
+  border: 1px solid transparent;
+  border-radius: 9999px;
+}
+
+/* オブジェクトの見た目（skin） */
+.input-message-skin {
+  background-color: #F4F5F7;
+  border-color: #F4F5F7;
+  &:focus-visible {
+    outline: none;
+  }
+}

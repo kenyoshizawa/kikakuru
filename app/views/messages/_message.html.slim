@@ -1,2 +1,20 @@
-div.message
-  = message.content
+/ current_userでcss分けたい
+/ div.message.clearfix [ class="#{message.user == current_user ? 'current-user-container' : 'others-container'}" ]
+/   p.name-structure [ class="#{message.user == current_user ? 'current-user-name-skin' : 'others-name-skin'}" ]
+/     = message.user.name
+/   p.message-structure [ class="#{message.user == current_user ? 'current-user-message-skin' : 'others-message-skin'}" ]
+/     = message.content
+
+/ organizerでcss分ける
+div.message.clearfix [ class="#{message.user.friend? ? 'current-user-container' : 'others-container'}" ]
+  p.name-structure [ class="#{message.user.friend? ? 'current-user-name-skin' : 'others-name-skin'}" ]
+    = message.user.name
+  p.message-structure [ class="#{message.user.friend? ? 'current-user-message-skin' : 'others-message-skin'}" ]
+    = message.content
+
+/ action cableでcurrent_userが使えない
+/ div.message.clearfix
+/   p.name-structure
+/     = message.user.name
+/   p.message-structure
+/     = message.content

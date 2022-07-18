@@ -1,0 +1,55 @@
+/* 枠（container） */
+.current-user-container {
+  padding: 20px 10px;
+  text-align: right;
+  margin: 0 10px 0 0;
+}
+.others-container {
+  padding: 20px 10px;
+  text-align: left;
+}
+
+
+/* オブジェクトを構成する要素（content） */
+// name
+/* オブジェクトの構造（structure） */
+.name-structure {
+  padding: 5px;
+}
+
+/* オブジェクトの見た目（skin） */
+// current-userの名前は非表示にする
+.current-user-name-skin {
+  // display:none;
+}
+.others-name-skin {
+  color: rgba(0, 0, 0, 0.87);
+}
+
+
+/* オブジェクトを構成する要素（content） */
+// message
+/* オブジェクトの構造（structure） */
+// 角が丸い四角
+.message-structure {
+  display: inline-block;
+  position: relative;
+  padding: 8px;
+  max-width: 250px;
+  border-radius: 12px;
+  background: transparent;
+  font-size: 14px;
+}
+
+/* オブジェクトの見た目（skin） */
+// current-userのメッセージは濃い色
+.current-user-message-skin {
+  background-color: #ff0084;
+  color: #FFFFFF;
+}
+
+// othersのメッセージは薄い色
+.others-message-skin {
+  background-color: #0063dc;
+  color: #FFFFFF;
+}

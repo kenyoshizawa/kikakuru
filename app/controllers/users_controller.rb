@@ -5,11 +5,12 @@ class UsersController < ApplicationController
 
   def create
     @friend = User.new(user_params)
+    @friend.role = :friend
 
     if @friend.save
       remember_user @friend
       @user_event = @friend.user_events.build(event_id: current_event.id)
-      @user_event.attendance = true
+      @user_event.attendance = :read
       @user_event.save
       redirect_to event_path(current_event.url)
     else

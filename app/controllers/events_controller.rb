@@ -26,7 +26,7 @@ class EventsController < ApplicationController
     if @user.save && @event.save
       remember_user @user
       @user_event = @user.user_events.build(event_id: @event.id)
-      @user_event.attendance = true
+      @user_event.attendance = :attendance
       @user_event.save
 
       @schedules = Form::ScheduleCollection.new(schedule_collection_params, @event.id)

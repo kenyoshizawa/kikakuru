@@ -64,13 +64,20 @@ div.container.container-base
           p.mb-2.font-weight-520.inner-label
             | メンバー
           div.container
-            ul.list-group
-              = render partial: 'users/user_name', collection: current_event.users, as: :user
+            = render partial: 'users/user_name', collection: current_event.users, as: :user
 
         div.mb-5
           p.mb-2.font-weight-520.inner-label
             | 回答期限
           div.inner-container
             = l current_event.deadlined_at, format: :Ymd_HM
+
+        // current_userが@friend、すなわちattendance: :readのとき、参加・不参加ボタン表示
+        div.mb-3.d-flex id="check-attendance-button"
+          - if current_user.user_events[0].read?
+            button.btn-create-structure.flex-fill.bg-primary.text-white class="ajax-attendance-this-event" data-event-url="#{current_event.url}"
+             | この企画に参加する
+            button.btn-create-structure.flex-fill.bg-danger.text-white class="ajax-absence-this-event" data-event-url="#{current_event.url}"
+             | この企画に参加しない
 
         = link_to 'グループチャット画面へ', event_messages_path(current_event.url), class: 'btn-chat-structure btn-chat-skin'

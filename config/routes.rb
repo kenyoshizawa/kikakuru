@@ -5,5 +5,6 @@ Rails.application.routes.draw do
   resources :events, param: :url do
     resources :messages, only: %i[index]
   end
+  resources :user_events, only: %i[update], param: :url
   mount ActionCable.server => '/cable'
 end

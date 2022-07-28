@@ -1,2 +1,18 @@
-li
-  = user.name
+ul.list-inline.justify-content-center
+  li.list-inline-item
+    = user.name
+
+  // current_eventに属しているusreがattendance: "attendance"のとき「出席」表示
+  - if user.user_events[0].attendance?
+    li.list-inline-item.bg-primary.text-white.p-1.mb-1
+      | 出席
+  - elsif user.user_events[0].absence?
+    li.list-inline-item.bg-danger.text-white.p-1.mb-1
+      | 欠席
+  - elsif user.user_events[0].read?
+    li.list-inline-item.bg-success.text-white.p-1.mb-1 id="event-member-#{user.id}"
+      | 既読
+
+  - if user.organizer?
+    li.list-inline-item
+      | 【幹事】

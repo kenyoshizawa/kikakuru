@@ -2,7 +2,7 @@
 environment "production"
 
 # UNIX Socketへのバインド
-tmp_path = "#{File.expand_path("../../..", __FILE__)}/tmp"
+tmp_path = "/var/www/kikakuru/tmp"
 bind "unix://#{tmp_path}/sockets/puma.sock"
 
 # スレッド数とWorker数の指定

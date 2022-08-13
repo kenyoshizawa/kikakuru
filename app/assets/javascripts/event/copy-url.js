@@ -2,9 +2,9 @@ $(function() {
   // urlコピー
   $("#copy-url").on("click", function(){
     // span 要素の内容を選択状態にする
-    const selection = document.getSelection();
-    const range = document.createRange();
-    const copyTarget = document.getElementById('copyTarget');
+    var selection = document.getSelection();
+    var range = document.createRange();
+    var copyTarget = document.getElementById('copyTarget');
     range.setStart(copyTarget, 0);
     range.setEnd(copyTarget, copyTarget.childNodes.length);
     selection.addRange(range);

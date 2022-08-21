@@ -24,10 +24,11 @@ div.container.container-base
               = f.text_field :place, class: 'form-control', placeholder: 'URL'
               = render 'layouts/error_messages', object: f.object, attribute: :place
               span.form-text.text-danger
-                | ※食べログ、またはGoogle Mapから開催場所のURLを貼り付けてください。
+                / | ※食べログ、またはGoogle Mapから開催場所のURLを貼り付けてください。
+                | ※Google Mapから開催場所のURLを貼り付けてください。
               ul.list-group-place
-                li
-                  = link_to '食べログ', 'https://tabelog.com/', target: :_blank
+                / li
+                /   = link_to '食べログ', 'https://tabelog.com/', target: :_blank
                 li
                   = link_to 'Google Map', 'https://www.google.co.jp/maps/?hl=ja', target: :_blank
 

@@ -8,6 +8,6 @@
 (function() {
   this.App || (this.App = {});
 
-  App.cable = ActionCable.createConsumer("wss://kikakuru.jp:8080/cable");
+  App.cable = ActionCable.createConsumer();
 
 }).call(this);

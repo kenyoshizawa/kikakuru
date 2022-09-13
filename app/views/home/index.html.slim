@@ -4,36 +4,45 @@ div.title-container
   p.title-secondary
     | キカクルは簡単に遊びの計画を立てられる企画作成ツールです
     br
-      | ブラウザは「Chrome」を推奨しています
+      | 企画URLを共有するとグループチャットができます
 
 div.container.container-wrapper
   div.row
     div.col-sm-4.col-6.col-event
       div.flex-event
         div.img-event
-          = image_tag 'img_delete_schedule.png', class: 'img-event'
+          = image_tag 'img_delete_type.png', class: 'img-event'
         p.title-event
-          | タイトル
+          | 削除タイプ
         ul.list-group-event
           li.list-group-item-event
-            | リスト１
+            | 幹事は複数の日程を選択
           li.list-group-item-event
-            | リスト２
+            | 友達は都合が悪い日を日程候補から削除
         = link_to '企画作成', new_event_path, class: 'btn-event-structure btn-event-skin'
 
     div.col-sm-4.col-6.col-event
       div.flex-event
         div.img-event
-          = image_tag 'img_add_schedule.png', class: 'img-event'
+          = image_tag 'img_marubatu_type.png', class: 'img-event'
         p.title-event
-          | タイトル
+          | マルバツタイプ
         ul.list-group-event
           li.list-group-item-event
-            | リスト１
+            | 幹事は複数の日程を選択
           li.list-group-item-event
-            | リスト２
-        = link_to '企画作成', new_event_path, class: 'btn-event-structure btn-event-skin'
+            | 友達は都合が合う日・悪い日を選択
+        = link_to '企画作成', new_event_path, class: 'btn-event-structure btn-event-skin btn-disabled'
 
-    div.col-sm-4.col-6
-      div.box
-        = link_to '企画作成', new_event_path
+    div.col-sm-4.col-6.col-event
+      div.flex-event
+        div.img-event
+          = image_tag 'img_amida_type.png', class: 'img-event'
+        p.title-event
+          | あみだタイプ
+        ul.list-group-event
+          li.list-group-item-event
+            | 幹事は複数の日程を選択
+          li.list-group-item-event
+            | 実施日はあみだくじによってランダムに決定
+        = link_to '企画作成', new_event_path, class: 'btn-event-structure btn-event-skin btn-disabled'

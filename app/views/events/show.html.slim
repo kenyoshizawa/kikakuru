@@ -16,7 +16,7 @@ div.container.container-base
             div.col-10.pr-0
               div.form-control.text-truncate
                 span#copyTarget
-                  = 'http://localhost:3000/events/' + current_event.url
+                  = 'https://kikakuru.jp/events' + current_event.url
             div.col-2.pl-0.mb-2
               button#copy-url.btn-create-structure.btn-event-skin.btn-adjust-semantic-ui-sass
                 span.fa.fa-fw.fa-clipboard
@@ -33,7 +33,7 @@ div.container.container-base
           p.mb-2.font-weight-520.inner-label
             | 場所
           div.inner-container
-            = link_to 'google mapから地名取得', current_event.place, target: :_blank
+            = link_to '実施場所のURL', current_event.place, target: :_blank
 
         div.mb-5
           p.mb-2.font-weight-520.inner-label
@@ -63,7 +63,7 @@ div.container.container-base
         div.mb-5
           p.mb-2.font-weight-520.inner-label
             | メンバー
-          div.container
+          div.inner-container
             = render partial: 'users/user_name', collection: current_event.users, as: :user
 
         div.mb-5

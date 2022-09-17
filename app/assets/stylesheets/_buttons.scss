@@ -82,6 +82,8 @@
   }
 }
 
+// ホーム画面 -> イベント作成フォーム（要素無効）
+/* オブジェクトの構造（structure） */
 .btn-disabled {
   pointer-events: none;
   user-select: none;
@@ -89,5 +91,15 @@
 
   &:focus {
     outline: none;
+  }
+}
+
+/* オブジェクトを構成する要素（content） */
+// ホーム画面 -> イベント作成フォーム
+/* オブジェクトの見た目（skin） */
+.btn-event-history-skin {
+  color: rgba(0, 0, 0, 0.87);
+  &:hover {
+    color: rgba(0, 0, 0, 0.87);
   }
 }

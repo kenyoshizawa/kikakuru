@@ -46,3 +46,18 @@ div.container.container-wrapper
           li.list-group-item-event
             | 実施日はあみだくじによってランダムに決定
         = link_to '企画作成', new_event_path, class: 'btn-event-structure btn-event-skin btn-disabled'
+
+  div.row
+    div.col-12.mb-5
+      div.card
+        div.card-header
+          h2.card-title
+            | このブラウザで作成された企画
+      - if current_user.organizer?
+        div.flex-event
+          = link_to 'https://kikakuru.jp/events/' + current_event.url, class: 'btn-event-history-skin' do
+            h2.title-event
+              = current_event.title
+            ul.list-group-event
+              li
+                | #{'https://kikakuru.jp/events/' + current_event.url}

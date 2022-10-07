@@ -1,11 +1,9 @@
 /* 枠（container） */
 .current-user-container {
-  padding: 20px 10px;
   text-align: right;
   margin: 0 10px 0 0;
 }
 .others-container {
-  padding: 20px 10px;
   text-align: left;
 }
 
@@ -39,6 +37,7 @@
   border-radius: 12px;
   background: transparent;
   font-size: 14px;
+  text-align: left;
 }
 
 /* オブジェクトの見た目（skin） */

@@ -57,17 +57,17 @@ https://kikakuru.jp
 ## 使用技術
 ### フロントエンド
 - HTML
-  - slim (4.1.0):可読性の向上
+  - slim (4.1.0)：可読性の向上
 
 - CSS、JavaScript
-  - bootstrap (4.5.3)：グリッドシステムの使用により実装を高速化
+  - bootstrap (4.5.3)：グリッドシステムの使用により実装コスト削減
   - jquery-rails (4.4.0)：Rails5.1以上でjquery(Ajax)を使用可能にする
 
   - Sprockets
     - sprockets-rails (3.2.2)：Rails4以降のアセットパイプラインに Sprockets の機能を提供
-    - sprockets (3.7.2)：アセットパイプラインの機能を提供（1.アセットの連結・圧縮）
-    - uglifier (4.2.0)：jsファイルをコンパイル（2.プリコンパイル/3.コンパイル）
-    - sass-rails (5.1.0)：sassファイルをコンパイル（2.プリコンパイル/3.コンパイル）
+    - sprockets (3.7.2)：アセットパイプラインの機能を提供
+    - uglifier (4.2.0)：jsファイルの圧縮
+    - sass-rails (5.1.0)：sassファイルコンパイル、cssファイルの圧縮
   
   - bootsnap (1.8.1)：Railsアプリケーションの高速化
 
@@ -88,7 +88,7 @@ https://kikakuru.jp
   - nginx(1.20.0)：Webサーバー
   - puma(3.12.6)：Applicationサーバー
 - Amazon RDS：データベース
-  - MySQL(5.7.33):DBサーバー
+  - MySQL(5.7.33)：DBサーバー
   
 - Amazon Route53：DNSサーバー
 - Let's Encrypt：SSLサーバ証明書（公開鍵）、秘密鍵

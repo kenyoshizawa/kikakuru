@@ -63,7 +63,7 @@ https://kikakuru.jp
   - bootstrap (4.5.3)：グリッドシステムの使用により実装コスト削減
   - jquery-rails (4.4.0)：Rails5.1以上でjquery(Ajax)を使用可能にする
 
-  - Sprockets
+  - アセットパイプライン
     - sprockets-rails (3.2.2)：Rails4以降のアセットパイプラインに Sprockets の機能を提供
     - sprockets (3.7.2)：アセットパイプラインの機能を提供
     - uglifier (4.2.0)：jsファイルの圧縮

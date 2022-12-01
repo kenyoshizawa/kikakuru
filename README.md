@@ -105,7 +105,7 @@ https://kikakuru.jp
 
 
 ## 機能
-### 認証
+### ユーザー認証
 - cookie store
 
 

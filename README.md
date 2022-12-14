@@ -100,8 +100,8 @@ https://kikakuru.jp
 
 
 ## ERD
-![kikakuru_ERD-ERD -就活用- drawio](https://user-images.githubusercontent.com/59391263/196417882-ea4664ca-2dea-4879-a502-5583daa1788e.png)
 
+![kikakuru_ERD-ERD -就活用- drawio](https://user-images.githubusercontent.com/59391263/207506953-15cf4ca2-ce2e-4e94-9ce1-35e3b8c23aa6.png)
 
 
 ## 機能

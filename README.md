@@ -75,6 +75,7 @@ https://kikakuru.jp
 
 ### バックエンド
 - rails (5.2.6)
+
   - ActiveModel (5.2.6)：FormObjectの使用
   - ActionCable (5.2.6)：WebSocket通信の機能を提供
   - ActiveJob (5.2.6)：非同期にCRUD処理を実行
@@ -87,10 +88,12 @@ https://kikakuru.jp
   - Amazon Linux 2：OS
   - nginx(1.20.0)：Webサーバー
   - puma(3.12.6)：Applicationサーバー
+
 - Amazon RDS：データベース
   - MySQL(5.7.33)：DBサーバー
   
 - Amazon Route53：DNSサーバー
+
 - Let's Encrypt：SSLサーバ証明書（公開鍵）、秘密鍵
 
 

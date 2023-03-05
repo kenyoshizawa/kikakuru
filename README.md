@@ -1,6 +1,5 @@
 # Kikakuru（キカクル）
 https://kikakuru.jp  
-[ポートフォリオ説明資料](https://docs.google.com/presentation/d/e/2PACX-1vThSE6wA9-hH2NAANV8lrZg0idr8r6q4kDWdP4h4wGTQgw4-3ryvTVIxhip0mGdPqL-TP7eFBNsQyzl/pub?start=false&loop=false&delayms=3000)
 
 
 ## サービス概要

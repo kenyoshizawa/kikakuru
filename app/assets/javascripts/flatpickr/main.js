@@ -29,11 +29,11 @@ $(function() {
     // カレンダーのヘッダーの月表示の方法
     monthSelectorType: 'static',
     // 特定日付以外を無効化
-    enable: [
-      {
-        from: 'today',
-        to: new Date('2024-01-01')
-      }
-    ],
+    // enable: [
+    //   {
+    //     from: 'today',
+    //     to: new Date('2024-01-01')
+    //   }
+    // ],
   });
 });

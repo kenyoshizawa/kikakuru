@@ -83,7 +83,7 @@ https://kikakuru.jp
 
 
 ### インフラストラクチャー
-- Amazon EC2
+- Amazon EC2：仮想サーバー
   - Amazon Linux 2：OS
   - nginx(1.20.0)：Webサーバー
   - puma(3.12.6)：Applicationサーバー

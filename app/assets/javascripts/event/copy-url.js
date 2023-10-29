@@ -1,5 +1,4 @@
 $(function() {
-  // urlコピー
   $("#copy-url").on("click", function(){
     // span 要素の内容を選択状態にする
     var selection = document.getSelection();

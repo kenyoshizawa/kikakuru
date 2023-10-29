@@ -1,7 +1,6 @@
 $(document).on("click", '.ajax-attendance-this-event', function() {
   var eventUrl = $(this).data("event-url");
 
-  // PATCH  /user_events/:url(.:format)  user_events#update
   $.ajax({
     type: 'PATCH',
     url: '/user_events/' +  eventUrl,
@@ -13,7 +12,6 @@ $(document).on("click", '.ajax-attendance-this-event', function() {
   })
   .then(
     function (data) {
-      // data = {current_user_id: 459}
       console.log("ajax成功");
 
       var current_user_id = data.current_user_id
@@ -31,7 +29,6 @@ $(document).on("click", '.ajax-attendance-this-event', function() {
   });
 })
 
-
 $(document).on("click", '.ajax-absence-this-event', function() {
   var eventUrl = $(this).data("event-url");
 
@@ -45,7 +42,6 @@ $(document).on("click", '.ajax-absence-this-event', function() {
     }
   })
   .then(function (data) {
-    // data = {current_user_id: 459}
     console.log("ajax成功");
 
     var current_user_id = data.current_user_id

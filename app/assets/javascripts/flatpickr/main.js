@@ -6,15 +6,7 @@ $(function() {
     altInput: true,
     // 表示用日付
     altFormat: "Y年n月j日（D） H:i",
-    // 送信用実データ
-    // https://tr.you84815.space/flatpickr/formattingTokens.html
-    // 日付のフォーマット
-    // Y:年の数字。4桁。	1999 や 2003等
-    // n:月の数字。0をつけません。1 ～ 12
-    // j;日付の数字。0をつけません。1 ～ 31
-    // D:日付の曜日。Mon ～ Sun
-    // H:時(24時間)	00 ～ 23
-    // i:分00 ～ 59
+    // 日付フォーマット
     dateFormat: "Y-m-d H:i",
     // 24時間表記にする
     time_24hr: true,

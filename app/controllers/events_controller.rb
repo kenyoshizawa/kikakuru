@@ -1,9 +1,6 @@
 class EventsController < ApplicationController
   before_action :set_event, only: %i[show]
 
-  def index
-  end
-
   def show
     remember_event @event
     @schedules = current_event.schedules.order(date: :asc)
@@ -34,25 +31,6 @@ class EventsController < ApplicationController
     else
       render :new
     end
-  end
-
-  def edit
-  end
-
-  def update
-    # authorize(@article)
-    # if @article.update_considering_published(article_params)
-    #   flash[:notice] = '更新しました'
-    #   redirect_to edit_admin_article_path(@article.uuid)
-    # else
-    #   render :edit
-    # end
-  end
-
-  def destroy
-    # 企画が終了したらforget(user)実行
-    forget current_user if logged_in?
-    redirect_to root_url
   end
 
   private

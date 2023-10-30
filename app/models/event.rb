@@ -9,9 +9,7 @@ class Event < ApplicationRecord
   validates :started_at, presence: true
   validates :finished_at, presence: true
   validates_with EventRangeValidator, unless: -> { started_at.blank? || finished_at.blank? }
-
   validates :deadlined_at, presence: true
-  # validates :url
 
   before_create -> { self.url = SecureRandom.uuid }
 end

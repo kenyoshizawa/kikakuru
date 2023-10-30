@@ -3,7 +3,6 @@ class UserEventsController < ApplicationController
 
   def update
     if @user_event.update(user_event_update_params)
-      # ここで更新されたuserオブジェクト渡す
       current_user_data = { 'current_user_id' => current_user.id }
       render "events/show", :json => current_user_data
     end

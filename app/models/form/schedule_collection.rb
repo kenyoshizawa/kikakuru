@@ -18,15 +18,6 @@ class Form::ScheduleCollection < Form::Base
     self.schedules = collection.map { |v| Schedule.new(date: v, event_id: event_id) }
   end
 
-  # def save
-  #   Schedule.transaction do
-  #     self.schedules.map(&:save!)
-  #   end
-  #     return true
-  #   rescue => e
-  #     return false
-  # end
-
   def save
     return false unless valid?
     Schedule.transaction { self.schedules.map(&:save!) }

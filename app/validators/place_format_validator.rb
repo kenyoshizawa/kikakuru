@@ -4,6 +4,7 @@ class PlaceFormatValidator < ActiveModel::EachValidator
       https://www.google.co.jp/maps/place/
       https://goo.gl/maps/
       https://www.google.com/maps/place/
+      https://maps.app.goo.gl/
     )
 
     unless value.start_with?(*googlemap_url)

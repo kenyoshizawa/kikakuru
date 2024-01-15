@@ -24,7 +24,7 @@ $(function() {
     enable: [
       {
         from: 'today',
-        to: new Date('2024-01-01')
+        to: new Date('2034-01-01')
       }
     ],
   });

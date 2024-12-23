@@ -1,5 +1,6 @@
 # Kikakuru（キカクル）
-~~https://kikakuru.jp~~（2024.4.30に公開終了したため、アクセスできません）
+https:/<hoge>/kikakuru.jp
+（2024.4.30に公開終了したため、アクセスできません）
 
 
 
